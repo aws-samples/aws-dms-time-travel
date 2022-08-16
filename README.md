@@ -1,17 +1,10 @@
-## My Project
+Debug AWS DMS tasks using Time Travel
 
-TODO: Fill this README out!
 
-Be sure to:
+Security
 
-* Change the title in this README
-* Edit your repository description on GitHub
+See CONTRIBUTING for more information.
 
-## Security
-
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
-
-## License
+License
 
 This library is licensed under the MIT-0 License. See the LICENSE file.
-

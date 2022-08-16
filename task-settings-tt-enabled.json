@@ -1,0 +1,18 @@
+{
+    "TTSettings": {
+        "EnableTT": true,
+        "TTS3Settings": {
+            "EncryptionMode": "SSE_KMS",
+            "ServerSideEncryptionKmsKeyId": "arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "ServiceAccessRoleArn": "arn:aws:iam::XXXXXXXXXXXX:role/dms-tt-s3-access-role",
+            "BucketName": "bucket-XXXXXXXXXXXX-us-east-1-dms-time-travel",
+            "BucketFolder": "myttfolder",
+            "EnableDeletingFromS3OnTaskDelete": false
+        },
+        "TTRecordSettings": {
+            "EnableRawData": true,
+            "OperationsToLog": "INSERT",
+            "MaxRecordSize": 64
+        }
+    }
+} 
