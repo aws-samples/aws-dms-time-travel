@@ -495,7 +495,7 @@ Resources:
       DBName: "dmstarget"
       Port: 3306
       Engine: mysql
-      EngineVersion: '8.0.16'
+      EngineVersion: '8.0.28'
       VPCSecurityGroups: [!Ref TargetRDSSecurityGroup]
       PubliclyAccessible: false
       StorageEncrypted: true
@@ -581,7 +581,6 @@ Resources:
         MigrationType: "full-load-and-cdc"
         ReplicationInstanceArn: !Ref DMSReplicationInstance
         ReplicationTaskIdentifier: "replicate-products"
-        ResourceIdentifier: String
         SourceEndpointArn: !Ref DMSSourceEndpoint
         ReplicationTaskSettings: !Sub '{
                               "Logging": {
@@ -708,7 +707,7 @@ Resources:
                                 "TableFailureMaxCount": 1000,
                                 "RecordFailureDelayInMinutes": 5,
                                 "MaxKeyColumnSize": 8096,
-                                "EnableValidation": true,
+                                "EnableValidation": false,
                                 "ThreadCount": 5,
                                 "RecordSuspendDelayInMinutes": 30,
                                 "ValidationOnly": false
@@ -723,7 +722,7 @@ Resources:
                                     "ServerSideEncryptionKmsKeyId": "${S3EncryptionKey.Arn}"
                                 },
                                 "TTRecordSettings": {
-                                    "OperationsToLog": "ALL",
+                                    "OperationsToLog": "INSERT",
                                     "EnableRawData": true,
                                     "MaxRecordSize": 64
                                 },
